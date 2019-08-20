@@ -14,7 +14,7 @@ import javax.persistence.Table;
 public class Lineitem {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
 
     @Column(name = "quantity")
     private long quantity;
@@ -30,11 +30,11 @@ public class Lineitem {
     @JoinColumn(name = "product_id")
     private Product product;
 
-    public long getId() {
+    public Long getId() {
         return this.id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

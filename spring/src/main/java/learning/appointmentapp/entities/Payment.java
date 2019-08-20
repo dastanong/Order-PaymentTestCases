@@ -14,7 +14,7 @@ import javax.persistence.Table;
 public class Payment {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
 
     @Column(name = "amount")
     private long amount;
@@ -29,11 +29,11 @@ public class Payment {
     @JoinColumn(name = "order_id")
     private Order order;
 
-    public long getId() {
+    public Long getId() {
         return this.id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

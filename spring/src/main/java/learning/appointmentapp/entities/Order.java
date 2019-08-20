@@ -14,7 +14,7 @@ import javax.persistence.Table;
 public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
 
     @OneToMany(mappedBy = "order")
     private Set<Lineitem> lineitems;
@@ -22,11 +22,11 @@ public class Order {
     @OneToMany(mappedBy = "order")
     private Set<Payment> payments;
 
-    public long getId() {
+    public Long getId() {
         return this.id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
